@@ -1,0 +1,10 @@
+<%= render 'header' %>
+
+<h1><%= @dog.name %></h1>
+
+<h3>Owners:</h3>
+<% @owners.each do |owner| %>
+  <ul>
+    <li><%= link_to owner.fullname, owner %></li>
+  </ul>
+<% end %>

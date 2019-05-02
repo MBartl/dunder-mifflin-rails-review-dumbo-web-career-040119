@@ -1,0 +1,16 @@
+<%= render 'header' %>
+
+<h1><%= @employee.fullname %></h1>
+<p><%= link_to "Edit Employee", edit_employee_path(@employee), method: :get %></p>
+<%= image_tag("#{@employee.img_url}", {class: "image", alt: "Picture of #{@employee.fullname}"})%>
+<br>
+
+<% if @employee.alias != "none" %>
+  <h3>Alias: <%= @employee.alias %></h2>
+<% end %>
+<h3>Position: <%= @employee.title %></h2>
+<h3>Office: <%= @employee.office %></h2>
+
+<br>
+<h3>Pet:</h3>
+<h3><%= link_to @employee.dog.name, @employee.dog %></h3>

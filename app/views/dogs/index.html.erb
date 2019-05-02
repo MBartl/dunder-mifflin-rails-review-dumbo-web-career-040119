@@ -1,0 +1,9 @@
+<%= render 'header' %>
+
+<h3>Dog Index Page</h3>
+
+<% @dogs.each do |dog| %>
+<ul>
+  <li><%= link_to dog.name, dog %></li>
+</ul>
+<% end %>
